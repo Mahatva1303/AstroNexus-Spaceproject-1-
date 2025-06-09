@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: #0ff;
+  position: relative;
+  background-image: url('images/photo-1563089145-599997674d42.avif');
+
+
+  
+}
+
+
+
+header {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  border-bottom: 2px solid #0ff;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3);
+  color: #0ff;
+}
+
+
+
+
+
+
+
+/*about*/
+.media-card {
+  margin: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 50px;                       /* space between image & text */
+  padding: 10px;
+  background: #0a0a0a;
+  border: 1px solid #0ff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.media-card:hover { transform: scale(1.03); }
+
+/* Image with “soft” (rounded) corners */
+.media-card img {
+  width: 360px;                    /* keep or tweak */
+  height: 320px;
+  object-fit: cover;               /* ensures image fills area */
+  border-radius: 12px;             /* soft corners */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  flex-shrink: 0;                  /* don’t let image squash */
+}
+
+/* Text container */
+.media-card__content {
+  flex: 1;                         /* occupy remaining width */
+  color: #0ff;
+}
+
+.media-card__content h2 {
+  margin: 10px 10px;
+  font-size: 1.8rem;
+  color: #0ff;
+}
+
+.media-card__content p {
+  margin: 20px;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+/*aboutend*/
+
+/*temperature graph*/
+.lunar-card {
+  margin: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 50px;                       /* space between image & text */
+  padding: 10px;
+  background: #0a0a0a;
+  border: 1px solid #0ff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Image with “soft” (rounded) corners */
+.lunar-card img {
+  width: 450px;                    /* keep or tweak */
+  height: 340px;
+  object-fit: cover;               /* ensures image fills area */
+  border-radius: 12px;             /* soft corners */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  flex-shrink: 0;                  /* don’t let image squash */
+}
+
+/* Text container */
+.lunar-card__content {
+  flex: 1;                         /* occupy remaining width */
+  color: #0ff;
+}
+
+.lunar-card__content h2 {
+  margin: 10px 10px;
+  font-size: 1.8rem;
+  color: #0ff;
+}
+
+.lunar-card__content p {
+  margin: 20px;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+/*temperature graph*/
+
+
+
+/*payloadcalcular*/
+.calculator {
+            background-color: #1a1a2e;
+            margin: 20px 30px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+            color: white;
+        }
+        input, button {
+            padding: 5px;
+            margin: 5px 0px;
+            border-radius: 5px;
+            border: 1px solid #444;
+        }
+        input {
+            background-color: #222;
+            color: #fff;
+            width: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #0d0d15;
+            border-radius: 5px;
+            min-height: 100px;
+        }
+        .slider-container {
+            margin: 15px 0;
+        }
+
+        /*payloadcalcular ends*/
+
+
+
+

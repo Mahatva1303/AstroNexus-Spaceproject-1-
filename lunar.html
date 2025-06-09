@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lunar.css" />
+     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+     <header>🌗 Lunar Space Habitat  🌗</header>
+
+
+
+<!--about-->
+    <div class="media-card">
+ <img src="images/lunar.jpeg" alt="lunar"/>
+  <div class="media-card__content">
+    <h2>🌗About lunar Habitat🌗</h2>
+    <p> A <span>lunar habitat</span> is a specially designed living environment that supports human life on the Moon. It provides essential resources such as 
+     oxygen, water, food, and energy, while shielding astronauts from harsh lunar conditions like extreme temperatures, radiation, and micrometeorite impacts. These habitats often include life support systems, power generation (usually solar), and modules for sleeping, working, and research. Lunar habitats are a key step toward sustainable space exploration and long-term Moon missions.
+
+      
+    </p>
+  </div>
+</div>
+<!--aboutend-->
+
+   <div class="lunar-card">
+ <img src="images/Screenshot 2025-06-05 142448.png" alt="Graph"/>
+  <div class="lunar-card__content">
+    <h2>🌡️ Lunar Surface Temperature Variation 🌡️</h2>
+    <p> This graph illustrates the temperature fluctuations on the lunar surface over the course of one full lunar day (approximately 29.5 Earth days). Due to the Moon's lack of atmosphere, temperatures swing dramatically—from scorching highs above 100°C during the lunar daytime to freezing lows near -150°C at night. These extreme variations highlight the critical need for thermal regulation systems in any sustainable lunar habitat. 
+    </p>
+  </div>
+</div>
+
+
+
+<!--payloadcalculator-->
+ <div class="calculator">
+        <h2>🚀 Moon Payload Calculator (Lunar Distance = 3,84,400 KM)</h2>
+        
+        <label for="dryMass">Rocket Dry Mass (kg):</label>
+        <input type="number" id="dryMass" value="120000">
+        
+        <label for="fuelMass">Fuel Mass (kg):</label>
+        <input type="number" id="fuelMass" value="1200000">
+        
+        <label for="isp">Engine Specific Impulse (s):</label>
+        <input type="number" id="isp" value="380">
+        
+        <button onclick="calculatePayload()">Calculate Payload</button>
+        
+        <div id="result">
+ <canvas id="distanceChart" height="120" style="margin-top: 20px;"></canvas>
+            <!-- Results will appear here -->
+        </div>
+      
+    </div>
+
+
+
+
+<!--payload calculator ends-->
+
+
+
+    <script src="lunar.js"></script>
+</body>
+</html>

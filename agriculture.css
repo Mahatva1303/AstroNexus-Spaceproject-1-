@@ -1,0 +1,297 @@
+/* === Base Setup === */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: #0ff;
+  position: relative;
+
+  /* Animated space gradient */
+  background: linear-gradient(-45deg, #001, #012, #023, #013);
+  background-size: 400% 400%;
+  animation: spaceFlow 18s ease-in-out infinite;
+}
+
+/* Background Image Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("images/plants1.jpeg")
+              center/cover no-repeat;
+  filter: brightness(0.6) blur(3px);
+  z-index: -2;
+}
+
+/* Stardust Texture Overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+/* Space gradient animation */
+@keyframes spaceFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Header === */
+header {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  border-bottom: 2px solid #0ff;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3);
+}
+
+/* === Dashboard Layout === */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* === Card Styling === */
+.card {
+  background-color: rgba(0, 255, 255, 0.05);
+  border: 1px solid #0ff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #0ff;
+}
+
+.status {
+  font-size: 1.2rem;
+  color: #0f0;
+}
+
+/* === Telemetry and Analytics === */
+.telemetry-section,
+.analytics-section {
+  margin: 50px 20px 20px;
+  padding: 30px;
+  background: #0a0a0a;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #0ff;
+}
+
+.telemetry-section h2,
+.analytics-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #0ff;
+  margin-bottom: 20px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 250px !important;
+  background: #111;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff;
+  padding: 10px;
+}
+
+/* === Crop Monitoring === */
+.crop-monitor-section {
+  margin: 50px 20px;
+  padding: 30px;
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #0ff;
+  color: white;
+  text-align: center;
+}
+
+.crop-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.crop-card {
+  width: 220px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(0, 255, 255, 0.05);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  border: 2px solid #0ff;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.crop-card:hover {
+  transform: scale(1.05);
+}
+
+.healthy { border-left: 6px solid #0f0; }
+.warning { border-left: 6px solid #ff0; }
+.critical { border-left: 6px solid #f00; }
+
+/* === System Overview === */
+.system-overview-section {
+  padding: 40px 20px;
+  background-color: #0b0b0b;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #0ff;
+  margin: 50px 20px;
+  color: white;
+  text-align: center;
+}
+
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.system-card {
+  width: 220px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+  border-left: 6px solid;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.system-card:hover { transform: scale(1.03); }
+.system-card.ok { border-color: #0f0; }
+.system-card.warning { border-color: #ff0; }
+.system-card.error { border-color: #f00; }
+
+/* === Control Panel === */
+.control-panel-section {
+  margin-top: 50px;
+  padding: 30px;
+  background: #0a0a0a;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #0ff;
+  text-align: center;
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.control-buttons button {
+  background-color: #0ff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.control-buttons button:hover {
+  background-color: #00aaff;
+}
+
+.control-status {
+  margin-top: 20px;
+  color: #0f0;
+  font-family: monospace;
+  background: #111;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #0ff;
+}
+
+#controlStatus {
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+
+
+.map-section {
+  margin: 50px 20px;
+  padding: 30px;
+  background: #0a0a0a;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #0ff;
+  text-align: center;
+}
+#orbitMap {
+  width: 100%;
+  height: 350px;           /* tweak to fit your design */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff;
+}
+
+
+/*aboutsectction*/
+
+/* === Media Card (image left, text right) === */
+.media-card {
+  margin: 50px 20px;
+  display: flex;
+  align-items: center;
+  gap: 50px;                       /* space between image & text */
+  padding: 40px;
+  background: #0a0a0a;
+  border: 1px solid #0ff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.media-card:hover { transform: scale(1.03); }
+
+/* Image with “soft” (rounded) corners */
+.media-card img {
+  width: 560px;                    /* keep or tweak */
+  height: 320px;
+  object-fit: cover;               /* ensures image fills area */
+  border-radius: 12px;             /* soft corners */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  flex-shrink: 0;                  /* don’t let image squash */
+
+}
+
+/* Text container */
+.media-card__content {
+  flex: 1;                         /* occupy remaining width */
+  color: #0ff;
+}
+
+.media-card__content h2 {
+  margin: 10px 10px;
+  font-size: 1.8rem;
+  color: #0ff;
+}
+
+.media-card__content p {
+  margin: 20px;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+

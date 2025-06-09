@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Space Agriculture Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+  <!-- in <head>, after your Google-fonts link -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+  <link rel="stylesheet" href="agriculture.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>🌱 Space Agriculture Dashboard 🌍</header>
+
+
+<!--about-->
+
+
+<!-- Media Card -->
+<div class="media-card">
+ <img src="images/ChatGPT Image Jun 5, 2025, 11_38_38 AM.png" alt="Spaceastronot"/>
+  <div class="media-card__content">
+    <h2>🌱About Space Agriculture🌱</h2>
+    <p>
+      Space agriculture is the practice of growing food and cultivating plants in space environments, such as aboard spacecraft, space stations, or future habitats on the Moon and Mars. It plays a crucial role in supporting long-term space missions by providing fresh food, recycling air and water, and reducing dependence on Earth-based supplies. This field combines advanced technologies in hydroponics, aeroponics, and controlled environments to overcome challenges like microgravity and limited resources.
+       <span class="status">Space Agriculture</span>.  
+      
+    </p>
+  </div>
+</div>
+
+
+<!--aboutend-->
+
+<!--starting 4 cards-->
+  <main class="dashboard">
+    <div class="card">
+      <h2>Plant Growth Status</h2>
+      <p class="status">Stage: Vegetative 🌿</p>
+    </div>
+
+    <div class="card">
+      <h2>Environmental Conditions</h2>
+      <p>Temp: 22°C | Humidity: 60% | Light: 90%</p>
+    </div>
+
+    <div class="card">
+      <h2>Resource Usage</h2>
+      <p>Water: 80% | Nutrients: 65% | Energy: 90%</p>
+    </div>
+
+    <div class="card">
+      <h2>Control Panel</h2>
+      <button>Toggle Lights</button>
+      <button>Start Irrigation</button>
+    </div>
+  </main>
+<!--ending 4 cards-->
+  <section class="telemetry-section">
+    <h2>Environmental Telemetry</h2>
+    <div class="charts-grid">
+      <canvas id="lightChart"></canvas>
+      <canvas id="waterChart"></canvas>
+      <canvas id="co2Chart"></canvas>
+    </div>
+  </section>
+
+  <section class="crop-monitor-section">
+    <h2>Crop Monitoring</h2>
+    <div class="crop-grid">
+      <div class="crop-card healthy">
+        <h3>🌱 Lettuce</h3>
+        <p><strong>Stage:</strong> Vegetative</p>
+        <p><strong>Status:</strong> ✅ Healthy</p>
+        <p><strong>Water:</strong> Normal</p>
+        <p><strong>Light:</strong> Adequate</p>
+      </div>
+      <div class="crop-card warning">
+        <h3>🍅 Tomato</h3>
+        <p><strong>Stage:</strong> Flowering</p>
+        <p><strong>Status:</strong> ⚠️ Needs Water</p>
+        <p><strong>Water:</strong> Low</p>
+        <p><strong>Light:</strong> High</p>
+      </div>
+      <div class="crop-card critical">
+        <h3>🌾 Wheat</h3>
+        <p><strong>Stage:</strong> Germination</p>
+        <p><strong>Status:</strong> ❌ Critical</p>
+        <p><strong>Water:</strong> Very Low</p>
+        <p><strong>Light:</strong> Moderate</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="system-overview-section">
+    <h2>Life Support & System Overview</h2>
+    <div class="system-grid">
+      <div class="system-card ok">
+        <h3>🔋 Power Supply</h3>
+        <p>Status: Stable</p>
+      </div>
+      <div class="system-card warning">
+        <h3>🛡️ Radiation Shielding</h3>
+        <p>Status: Slight Increase</p>
+      </div>
+      <div class="system-card ok">
+        <h3>💧 Water Recycling</h3>
+        <p>Status: Optimal</p>
+      </div>
+      <div class="system-card error">
+        <h3>🌡️ Temperature Control</h3>
+        <p>Status: Critical Alert</p>
+      </div>
+      <div class="system-card ok">
+        <h3>🌬️ Air Composition</h3>
+        <p>Status: Normal</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="analytics-section">
+    <h2>Crop Growth Analytics</h2>
+    <div class="charts-grid">
+      <canvas id="moistureChart"></canvas>
+      <canvas id="humidityChart"></canvas>
+      <canvas id="phChart"></canvas>
+      <canvas id="tempChart"></canvas>
+    </div>
+  </section>
+
+  <div class="control-panel-section">
+  <h2>🌐 Crop Control Panel</h2>
+  <div class="control-buttons">
+    <button id="toggleLights">💡 Toggle Lights</button>
+    <button id="startIrrigation">💧 Start Irrigation</button>
+    <button id="sendAlert">⚠️ Send Alert</button>
+  </div>
+  <div id="controlStatus" class="control-status">
+    <p>Status messages will appear here.</p>
+  </div>
+</div>
+
+
+
+<!-- Map integration section -->
+<section class="map-section">
+  <h2>🛰️ Orbital Ground-Track</h2>
+  <div id="orbitMap"></div>
+</section>
+<!--Map integration ends-->
+
+  <script src="agriculture.js"></script>
+</body>
+</html>
+

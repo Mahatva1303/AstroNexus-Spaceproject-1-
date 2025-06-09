@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mission Control</title>
+  <link rel="stylesheet" href="mission.css" />
+</head>
+<body>
+  <div id="star-container"></div>
+  <nav class="sticky-navbar">
+  <div class="nav-title">🚀 AstroNexus Control</div>
+  <div class="navtitle">     Mission Control</div>
+  <div class="nav-links">
+    <a href="#dashboard">Dashboard</a>
+    <a href="#telemetry">Telemetry</a>
+    <a href="#logs">Logs</a>
+    <a href="#status">Status</a>
+    <a href="#map">Map</a>
+  </div>
+</nav>
+
+
+  <div class="mission-header">
+    <h1>Mission Control</h1>
+  </div>
+
+  <div class="dashboard">
+    <!-- Placeholder for Satellite Status -->
+    <div class="card" id="satellite-status"></div>
+
+    <!-- Placeholder for Telemetry Chart -->
+    <div class="card">
+      <h2>Telemetry Chart</h2>
+      <canvas id="telemetryChart" width="300" height="200"></canvas>
+    </div>
+ 
+
+    <!-- Placeholder for Communication Logs -->
+   <div class="card">
+       <h2>Communication Logs</h2>
+       <div id="comm-logs" class="logs-panel"></div>
+   </div>
+
+
+ 
+
+<div class="status-card radiation">
+  <div class="status-icon">☢️</div>
+  <div class="status-title">Radiation Monitor</div>
+  <div class="status-value" id="radiationValue">0.35 μSv/h</div>
+  <div class="status-desc" id="radiationStatus">Safe</div>
+</div>
+
+
+
+
+  </div>
+ <div class="system-status">
+  <h2>System Status</h2>
+  <div class="status-grid">
+    <div class="status-card" id="status-power">🔋 Power: <span class="status">OK</span></div>
+    <div class="status-card" id="status-nav">🧭 Navigation: <span class="status">OK</span></div>
+    <div class="status-card" id="status-life">🌱 Life Support: <span class="status">OK</span></div>
+    <div class="status-card" id="status-comm">📡 Communication: <span class="status">OK</span></div>
+  </div>
+</div>
+
+<section class="control-panel">
+  <h2>🎮 Mission Control Panel</h2>
+  <div class="control-buttons">
+    <button class="control-btn deploy">🛰️ Deploy Satellite</button>
+    <button class="control-btn abort">🛑 Abort Mission</button>
+    <button class="control-btn reboot">🔄 System Reboot</button>
+    <button class="control-btn launch">🚀 Launch Booster</button>
+  </div>
+</section>
+
+<div class="map-container">
+  <img src="images/earth2.webp" alt="Mini Earth" class="mini-earth">
+  <img src="satellite.svg" alt="Satellite" class="orbiting-satellite">
+</div>
+
+<div class="satellite-status">
+  <h3>🛰️ Satellite: Aryabhata</h3>
+  <p>📍 Location: <span id="sat-lat">--</span>, <span id="sat-lon">--</span></p>
+  <p>🚀 Speed: <span id="sat-speed">--</span> km/h</p>
+  <p>Status: <span id="sat-status">--</span></p>
+</div>
+
+
+<!-- Mission timeline -->
+
+<section id="horizontal-timeline" class="timeline-section">
+  <h2 class="section-title">🛰️ Mission Timeline</h2>
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
+    
+    <div class="timeline-item">
+      <div class="mission-name">Artemis III</div>
+      <div class="circle"></div>
+      <div class="mission-date">2025-06-01</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="mission-name">ISRO Venus Orbiter</div>
+      <div class="circle"></div>
+      <div class="mission-date">2025-08-15</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="mission-name">Polaris Dawn</div>
+      <div class="circle"></div>
+      <div class="mission-date">2025-11-30</div>
+    </div>
+
+    <!-- Add more items as needed -->
+  </div>
+</section>
+
+<!-- mISSION UPADES UPCOMMING AND DONE-->
+<section class="highlighted-missions">
+  <h2 class="section-title">🚀 Highlighted Space Missions</h2>
+
+  <div class="mission-highlight-row">
+    <!-- Left: Text Box -->
+    <div class="mission-text-box">
+      <h3>Artemis III – Lunar Landing</h3>
+      <p>
+        NASA’s Artemis III aims to return humans to the Moon in 2026, focusing on lunar South Pole exploration and sustainable presence.
+      </p>
+      <p><strong>Status:</strong> Upcoming • <strong>Date:</strong> June 2026</p>
+    </div>
+
+    <!-- Right: Image Box -->
+    <div class="mission-image-box">
+      <img src="images/usa.jpg" alt="Artemis Mission" />
+    </div>
+  </div>
+
+  <div class="mission-highlight-row">
+    <!-- Left: Text Box -->
+    <div class="mission-text-box">
+      <h3>Chandrayaan-3</h3>
+      <p>
+        India's Chandrayaan-3 mission successfully landed near the Moon's south pole in 2023, marking a major milestone in lunar exploration.
+      </p>
+      <p><strong>Status:</strong> Completed • <strong>Date:</strong> August 2023</p>
+    </div>
+
+    <!-- Right: Image Box -->
+    <div class="mission-image-box">
+      <img src="images/chandrayan.jpg" alt="Chandrayaan Mission" />
+    </div>
+  </div>
+</section>
+
+<div class="spaceheadline">
+<h1>Top Space Agency</h1>
+</div>
+<div class="SPACErow">
+
+  <div class="image-text-card">
+    <img src="images/NASA.jpg" class="card-img">
+    <h3 class="card-heading">NASA</h3>
+  </div>
+  <div class="image-text-card">
+    <img src="images/ISRO.png" class="card-img">
+    <h3 class="card-heading">ISRO</h3>
+  </div>
+  <div class="image-text-card">
+    <img src="images/RUSSIA.png" class="card-img">
+    <h3 class="card-heading">SPUTNIC</h3>
+  </div>
+  <div class="image-text-card">
+    <img src="images/CHINA.jpg" class="card-img">
+    <h3 class="card-heading">CHINA</h3>
+  </div>
+  <div class="image-text-card">
+    <img src="images/SPACEX.png" class="card-img">
+    <h3 class="card-heading">SPACEX</h3>
+  </div>
+  <!-- Add more cards as needed -->
+</div>
+
+
+
+
+<footer>
+  <div class="footername">
+
+    <h3>AstroNeucus</h3>
+    
+  </div>
+ <h7>@MadeBy MAHATVA AGARWAL</h7>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="mission.js"></script>
+</body>
+</html>
