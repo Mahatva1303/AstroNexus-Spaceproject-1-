@@ -31,7 +31,7 @@ A web-based simulation and dashboard for space-themed content. Built using HTML,
 - User interactive
 - GIves information about group growing in space showing differents need
 - Map representation
-##Screenshorts
+## Screenshorts
 <p align="center">
   <img src="images/image1.png" alt="Dashboard 1" width="350"/>
   <img src="images/image2.png" alt="Dashboard 2" width="350"/>
