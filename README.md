@@ -37,6 +37,7 @@ A web-based simulation and dashboard for space-themed content. Built using HTML,
   <img src="images/image2.png" alt="Dashboard 2" width="350"/>
    <img src="images/image3.png" alt="Dashboard 2" width="350"/>
 </p>
+
 ### 📂 Folder Structure
 - 📂images
 - agriculture.html
